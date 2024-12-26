@@ -61,6 +61,10 @@ function App() {
           case "/":
           setRes(parseInt(n1) / parseInt(n2));
           break;
+
+          case "^":
+          setRes(Math.pow(parseInt(n1), parseInt(n2)));
+          break;
       
         default:
           break;
@@ -88,7 +92,7 @@ function App() {
           <article id="numbersGrid">
             <button type="button" className="operatorButton" onClick={() => erase()}> C </button>
             <button type="button" className="operatorButtonOff">  </button>
-            <button type="button" className="operatorButtonOff">  </button>
+            <button type="button" className="operatorButton" onClick={() => addOperator('^')}> ^ </button>
             <button type="button" className="numbersButton" onClick={() => addNumber('7')}> 7 </button>
             <button type="button" className="numbersButton" onClick={() => addNumber('8')}> 8 </button>
             <button type="button" className="numbersButton" onClick={() => addNumber('9')}> 9 </button>
